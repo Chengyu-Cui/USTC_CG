@@ -54,6 +54,7 @@ namespace Ubpa {
 				return mem;
 			else
 				throw std::bad_alloc();
+			
 		}
 
 		void operator delete(void* mem) noexcept {

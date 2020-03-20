@@ -7,9 +7,9 @@
 namespace Ubpa {
 	class Light;
 
-	class CmptLight : public Component {
+	class CmptLight final : public Component {
 	public:
-		CmptLight(Ptr<SObj> sobj = nullptr, Ptr<Light> light = nullptr)
+		CmptLight(Ptr<SObj> sobj, Ptr<Light> light)
 			: Component(sobj), light(light) { }
 
 	public:

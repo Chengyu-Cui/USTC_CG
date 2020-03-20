@@ -7,7 +7,7 @@
 
 #include <UGM/transform.h>
 
-#include <UDP/Visitor/MultiVisitor.h>
+#include <UDP/MultiVisitor.h>
 
 namespace Ubpa {
 	class Operation;

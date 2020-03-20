@@ -5,9 +5,9 @@
 namespace Ubpa {
 	class Material;
 
-	class CmptMaterial : public Component {
+	class CmptMaterial final : public Component {
 	public:
-		CmptMaterial(Ptr<SObj> sobj = nullptr, Ptr<Material> material = nullptr)
+		CmptMaterial(Ptr<SObj> sobj, Ptr<Material> material)
 			: Component(sobj), material(material) { }
 
 	public:

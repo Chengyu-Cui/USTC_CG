@@ -1,6 +1,6 @@
 #pragma once
 
-#include <UDP/Visitor/Visitor.h>
+#include <UDP/Visitor.h>
 
 namespace Ubpa {
 	class SObj;

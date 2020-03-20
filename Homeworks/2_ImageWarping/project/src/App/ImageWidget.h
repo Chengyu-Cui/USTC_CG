@@ -1,5 +1,8 @@
 #pragma once
 #include <QWidget>
+#include<vector>
+#include"IDW.h"
+#include"RBF.h"
 
 QT_BEGIN_NAMESPACE
 class QImage;
@@ -29,9 +32,18 @@ public slots:
 	void Mirror(bool horizontal=false, bool vertical=true);		// Mirror image vertically or horizontally
 	void TurnGray();											// Turn image to gray-scale map
 	void Restore();												// Restore image to origin
+	void mousePressEvent(QMouseEvent* event);
+	void mouseReleaseEvent(QMouseEvent* event);
+	void mouseMoveEvent(QMouseEvent* event);
+	void start_RBF();
+	void start_IDW();
 
 private:
-	QImage		*ptr_image_;				// image 
-	QImage		*ptr_image_backup_;
+	QImage* ptr_image_;				// image 
+	QImage* ptr_image_backup_;
+	std::vector<QPoint> origin_points_;
+	std::vector<QPoint> target_points_;
+	QPoint start_point_, end_point_;
+	bool draw_status_;
 };
 
