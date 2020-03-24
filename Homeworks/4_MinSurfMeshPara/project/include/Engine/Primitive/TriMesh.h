@@ -10,7 +10,7 @@
 #include <vector>
 
 namespace Ubpa {
-	class TriMesh : public Primitive {
+	class TriMesh final : public Primitive {
 	public:
 		enum ENUM_TYPE
 		{
@@ -22,8 +22,6 @@ namespace Ubpa {
 			DISK,
 		};
 	public:
-		TriMesh() : type(INVALID) {}
-
 		TriMesh(const std::vector<unsigned>& indice,
 			const std::vector<pointf3>& positions,
 			const std::vector<normalf>& normals,
@@ -84,7 +82,7 @@ namespace Ubpa {
 			const std::vector<normalf>& tangents = std::vector<normalf>(),
 			ENUM_TYPE type = ENUM_TYPE::CODE);
 
-	protected:
+	private:
 		virtual ~TriMesh() = default;
 
 	private:
